@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fullwidth Extension",
+  "description": "It turns your text into A E S T H E T I C S",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  "browser_action": {
+    "default_icon": "icon-512.png",
+    "default_popup": "index.html"
+  }
+}
