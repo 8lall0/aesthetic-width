@@ -9,5 +9,6 @@ This extension is licensed under the MIT License.
 ## TODO
 * Make it more ａｅｓｔｈｅｔｉｃ
 * Check if document.execCommand() is safe
+* Create a .crx package for easy download
 * Put this stuff onto Chrome Web Store
 
