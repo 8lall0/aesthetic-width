@@ -1,35 +1,39 @@
-const fwidth = 0xFEE0;
-
 document.addEventListener('DOMContentLoaded', function() {
-	var infield = document.getElementById('intext');
-	var outfield = document.getElementById('outtext');
+	var btnArray = ['~', '©', '®'];
+
+	var field = document.getElementById('intext');
+	var message = document.getElementById('copytext');
+	var btns = document.getElementById('specButtons');
 
     var sub = document.getElementById('fullwsub');
-    var cpy = document.getElementById('fullwcpy');
     var til = document.getElementById('til');
     var cop = document.getElementById('cop');
     var roy = document.getElementById('roy');
     
     sub.addEventListener('click', function() {
-        convert();
+        convertAndCopy(field);
+        fadeOutIn(message, 1000);
     });
-    cpy.addEventListener('click', function() {
-    	selectField(outfield);
-    })
-    til.addEventListener('click', function() {
-		addToText("~", infield);
-	});
-	cop.addEventListener('click', function() {
-		addToText("©", infield);
-	});
-	roy.addEventListener('click', function() {
-		addToText("®", infield);
-	});
+	addBtns(btns, btnArray, field);
 });
 
-function convert() {
-	var input = document.getElementById('intext').value;
-	var output = input.replace(/[\u0000-\u007F]/g, function(ch) {
+function addBtns(elem, array, intext) {
+	for (var i = 0; i < array.length; i++) { (
+		function (i) {
+			var btn = document.createElement("button");
+			var t = document.createTextNode(array[i]);
+			btn.appendChild(t);
+			elem.appendChild(btn);
+			btn.addEventListener('click', function() {
+				intext.value += array[i];
+			});
+		}) (i);
+	}
+}
+
+function convertAndCopy(elem) {
+	const fwidth = 0xFEE0;
+	elem.value = elem.value.replace(/[\u0000-\u007F]/g, function(ch) {
 		if (ch != " ") {
 			return String.fromCharCode(ch.charCodeAt(0) + fwidth);	
 		} else {
@@ -38,15 +42,20 @@ function convert() {
 		
 	});
 
-	document.getElementById('outtext').value = output;
-}
-
-function addToText(text, field) {
-	field.value += text;
-}
-
-function selectField(field) {
-	field.focus();
-	field.select();
+	elem.focus();
+	elem.select();
 	document.execCommand("Copy", true);
+	elem.blur();
+}
+
+function fadeOutIn(elem, speed ) {
+	if (!elem.style.opacity) {
+		elem.style.opacity = 1;
+	}
+	var outInterval = setInterval(function() {
+		elem.style.opacity -= 0.02;
+		if (elem.style.opacity <= 0) {
+			clearInterval(outInterval);
+		}
+	}, speed/50 );
 }

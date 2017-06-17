@@ -14,19 +14,17 @@
 		#fullwsub {
 			margin: 5px;
 		}
+		.invisible {
+			opacity: 0;
+		}
 	</style>
 </head>
 <body>
 <p>Ｆｕｌｌｗｉｄｔｈ<br/>ｆｏｒ<br/>Ｃｈｒｏｍｅ</p>
-<p><input type="button" value="~" id="til">
-<input type="button" value="©" id="cop">
-<input type="button" value="®" id="roy"></p>
-<textarea id="intext" rows="3" placeholder="Your text here"></textarea>
-<input type="button" id="fullwsub" value="Ｃｏｎｖｅｒｔ">
-<br/>
-<textarea readonly id="outtext" rows="3"></textarea>
-<!--<input type="button" id="fullwcpy" value="Ｓｅｌｅｃｔ">-->
-<input type="button" id="fullwcpy" value="Ｃｏｐｙ">
-<p><a href="https://github.com/8lall0/aesthetic-width" target="_blank">Ｇｉｔｈｕｂ</a></p>
+<p id="specButtons"></p>
+<p><textarea id="intext" rows="3" placeholder="Your text here"></textarea></p>
+<button id="fullwsub">Ｃｏｎｖｅｒｔ</button>
+<p class="invisible" id="copytext">Ｃｏｐｉｅｄ！</p>
+<p><a href="https://github.com/8lall0/aesthetic-width" target="_blank" title="Visit Github!">Ｇｉｔｈｕｂ</a>
 </body>
 </html>
