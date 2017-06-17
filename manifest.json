@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "aesthetic-width",
+  "name": "Ａｅｓｔｈｅｔｉｃ Ｗｉｄｔｈ",
+  "short-name" : "Ａｅｓｔｈｅｔｉｃ Ｗｉｄｔｈ",
   "description": "A simple-yet-stupid chrome extension to have fullwidth text for your vaporwave ＬＩＦＥ.",
   "version": "2.0",
   "content_security_policy": "script-src 'self'; object-src 'self'",

@@ -3,12 +3,8 @@ A simple-yet-stupid chrome extension to have fullwidth text for your vaporwave �
 ## Screenshot
 ![Screenshot](screenshot.png)
 ## Install
-Download master branch and install as "unpacked extension".
+[Chrome web store](https://goo.gl/uXArzk)
 ## License
 This extension is licensed under the MIT License.
-## TODO
-* Make it more ａｅｓｔｈｅｔｉｃ
-* Check if document.execCommand() is safe
-* Create a .crx package for easy download
-* Put this stuff onto Chrome Web Store
+
 
