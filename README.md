@@ -7,6 +7,6 @@ A simple-yet-stupid chrome extension to have fullwidth text for your vaporwave ï
 ## Install
 [Chrome web store](https://goo.gl/uXArzk)
 ## License
-This extension is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 
